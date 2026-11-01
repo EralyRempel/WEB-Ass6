@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the Team</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header id="main-header">
+        <h1>Internet Cafe</h1>
+        <nav class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="team.html">About Team</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <button type="button" class="btn header-subscribe" data-open-subscription>Subscribe</button>
+    </header>
+
+    <main>
+        <div class="card-row">
+            <section class="card" style="margin: 0; text-align: center;">
+                <h2>Meet the Developer</h2>
+                <div class="member-profile">
+                    <img src="images/member.png" alt="Profile picture" class="profile-img" style="margin: 1rem auto;">
+                    <h3 style="color: #00ffcc;">Lead Developer</h3>
+                </div>
+                <p>Solo creator responsible for UI design, responsive layouts, and frontend logic.</p>
+            </section>
+
+            <section class="card" style="margin: 0;">
+                <h2>Hobbies & Interests</h2>
+                <ul style="padding-left: 20px; color: #cccccc;">
+                    <li>Competitive Esports</li>
+                    <li>PC Hardware Building</li>
+                    <li>Software Engineering</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <div class="modal-backdrop" id="subscription-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-content">
+        <button type="button" class="close-modal" id="close-modal" aria-label="Close subscription form">&times;</button>
+        <h2 id="modal-title">Join our cafe updates</h2>
+        <p>Get news about gaming events, tournaments and special offers.</p>
+        <p class="popup-more-info">For more information, click <a href="https://youtu.be/dQw4w9WgXcQ?si=LxP4lefhj2hTHnbE" target="_blank" rel="noopener noreferrer">Here</a>.</p>
+        <form id="subscription-form">
+          <label for="subscription-email">Email address</label>
+          <input id="subscription-email" name="subscription-email" type="email" placeholder="you@example.com" autocomplete="email" required>
+          <button class="btn" type="submit">Subscribe</button>
+          <p id="subscription-feedback" class="form-message" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+        <p>Created by: Eraly</p>
+    </footer>
+
+</body>
+</html>

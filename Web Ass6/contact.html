@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header id="main-header">
+        <h1>Internet Cafe</h1>
+        <nav class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="team.html">About Team</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <button type="button" class="btn header-subscribe" data-open-subscription>Subscribe</button>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Book a Station / Get in Touch</h2>
+            <form id="contact-form" novalidate>
+                <label for="name">Full Name:</label><br>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required><br><br>
+
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="email" name="email" placeholder="name@example.com" autocomplete="email" required aria-describedby="email-help">
+                <p id="email-help" class="small-note">Enter a valid email address containing @, for example name@example.com.</p><br><br>
+
+                <label for="password">Create a password (minimum 8 characters):</label>
+                <input type="password" id="password" name="password" minlength="8" autocomplete="new-password" required placeholder="At least 8 characters" aria-describedby="password-length"><p id="password-length" class="small-note" aria-live="polite">Password length: 0 characters (minimum 8).</p>
+                <label for="confirm-password">Confirm password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" autocomplete="new-password" required placeholder="Enter the same password again">
+
+                <label for="zone-type">Select Zone Type:</label><br>
+                <select id="zone-type" name="zone-type" required>
+                    <option value="" disabled selected>Select a Zone</option>
+                    <option value="standard">Standard Zone ($3.00/hr)</option>
+                    <option value="vip">VIP Gaming Zone ($6.00/hr)</option>
+                    <option value="pro">Pro Tournament Suite ($10.00/hr)</option>
+                </select><br><br>
+
+                <label for="message">Message or Special Requests:</label><br>
+                <textarea id="message" name="message" rows="5" placeholder="Let us know your booking requests"></textarea><br><br>
+
+                <button type="submit" class="btn">Submit Booking Request</button>
+                <div id="form-message" class="form-message" role="status" aria-live="polite" tabindex="-1"></div>
+            </form>
+        </section>
+    </main>
+
+    <div class="modal-backdrop" id="subscription-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-content">
+        <button type="button" class="close-modal" id="close-modal" aria-label="Close subscription form">&times;</button>
+        <h2 id="modal-title">Join our cafe updates</h2>
+        <p>Get news about gaming events, tournaments and special offers.</p>
+        <p class="popup-more-info">For more information, click <a href="https://youtu.be/dQw4w9WgXcQ?si=LxP4lefhj2hTHnbE" target="_blank" rel="noopener noreferrer">Here</a>.</p>
+        <form id="subscription-form">
+          <label for="subscription-email">Email address</label>
+          <input id="subscription-email" name="subscription-email" type="email" placeholder="you@example.com" autocomplete="email" required>
+          <button class="btn" type="submit">Subscribe</button>
+          <p id="subscription-feedback" class="form-message" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+        <p>Created by: Eraly</p>
+        <p>Current date and time: <span class="footer-date-time" aria-live="off">Loading…</span></p>
+    </footer>
+</body>
+</html>

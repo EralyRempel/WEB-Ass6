@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header id="main-header">
+        <h1> Internet Cafe</h1>
+        <nav class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="team.html">About Team</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <button type="button" class="btn header-subscribe" data-open-subscription>Subscribe</button>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Welcome to our Internet Cafe</h2>
+            <p>We provide high-speed internet, top tier hardware, and comfortable rooms</p>
+            <img src="images/cafe-main.jpg" alt="Interior view of Internet Cafe" class="feature-img">
+        </section>
+
+        <!-- Task 2: Autocomplete search suggestions -->
+        <section class="card" aria-labelledby="search-heading">
+            <h2 id="search-heading">Search the cafe</h2>
+            <p class="small-note">Find a game, a zone or a page. Start typing, for example “val”, “vip” or “contact”.</p>
+            <div class="autocomplete">
+                <label for="site-search" class="sr-only">Search games, zones and pages</label>
+                <input type="text" id="site-search" placeholder="Search games, zones, pages…" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suggestions">
+                <ul id="suggestions" class="suggestions" role="listbox" aria-label="Search suggestions"></ul>
+            </div>
+        </section>
+
+        <!-- Task 5: Animated number counter -->
+        <section class="card stats-card" id="stats" aria-labelledby="stats-heading">
+            <h2 id="stats-heading">Our cafe in numbers</h2>
+            <div class="stats-grid">
+                <div class="stat"><span class="stat-number" data-target="1000" data-suffix="+">1,000+</span><span class="stat-label">Happy gamers</span></div>
+                <div class="stat"><span class="stat-number" data-target="45">45</span><span class="stat-label">Gaming PCs</span></div>
+                <div class="stat"><span class="stat-number" data-target="120" data-suffix="+">120+</span><span class="stat-label">Tournaments hosted</span></div>
+                <div class="stat"><span class="stat-number" data-target="99.9" data-decimals="1" data-suffix="%">99.9%</span><span class="stat-label">Network uptime</span></div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Why Choose Us?</h2>
+            <ul id="why-list">
+                <li>1 Gbps Internet</li>
+                <li>Top tier Hardware</li>
+                <li>Private Rooms</li>
+                <li>24/7 Snacks and Drinks Bar</li>
+            </ul>
+        </section>
+
+        <!-- Task 8: Copy to clipboard -->
+        <section class="card" aria-labelledby="copy-heading">
+            <h2 id="copy-heading">Handy info</h2>
+            <p class="small-note">Click the copy button next to any item to copy it.</p>
+            <div class="snippet-list">
+                <div class="snippet">
+                    <span class="snippet-label">Wi-Fi network</span>
+                    <code class="snippet-text">InternetCafe_5G</code>
+                    <span class="copy-wrap"><button type="button" class="copy-btn" aria-label="Copy Wi-Fi network"><svg class="icon-copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="icon-check" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></button><span class="copy-tooltip" role="status">Copied to clipboard!</span></span>
+                </div>
+                <div class="snippet">
+                    <span class="snippet-label">Wi-Fi password</span>
+                    <code class="snippet-text">Gamer#2026</code>
+                    <span class="copy-wrap"><button type="button" class="copy-btn" aria-label="Copy Wi-Fi password"><svg class="icon-copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="icon-check" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></button><span class="copy-tooltip" role="status">Copied to clipboard!</span></span>
+                </div>
+                <div class="snippet">
+                    <span class="snippet-label">Promo code</span>
+                    <code class="snippet-text">GAMER10</code>
+                    <span class="copy-wrap"><button type="button" class="copy-btn" aria-label="Copy promo code"><svg class="icon-copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="icon-check" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></button><span class="copy-tooltip" role="status">Copied to clipboard!</span></span>
+                </div>
+                <div class="snippet">
+                    <span class="snippet-label">Booking email</span>
+                    <code class="snippet-text">booking@internetcafe.kz</code>
+                    <span class="copy-wrap"><button type="button" class="copy-btn" aria-label="Copy booking email"><svg class="icon-copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="icon-check" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></button><span class="copy-tooltip" role="status">Copied to clipboard!</span></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="card gallery-section" aria-labelledby="gallery-heading">
+            <h2 id="gallery-heading">Inside Our Internet Cafe</h2>
+            <p class="gallery-intro">Take a look at our gaming space, setup and cafe atmosphere.</p>
+            <div class="cafe-gallery">
+                <figure class="gallery-item">
+                    <img class="gallery-thumb lazy" tabindex="0" role="button" aria-label="View larger image: Gaming stations" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/cafe-main.jpg" alt="Gaming computers and chairs in our cafe">
+                    <figcaption>Gaming stations</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img class="gallery-thumb lazy" tabindex="0" role="button" aria-label="View larger image: Gaming room design" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/Design.jpg" alt="Gaming room design with red lighting">
+                    <figcaption>Gaming room design</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img class="gallery-thumb lazy" tabindex="0" role="button" aria-label="View larger image: Gaming experience" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/Gaming.jpg" alt="Player enjoying a gaming setup">
+                    <figcaption>Gaming experience</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img class="gallery-thumb lazy" tabindex="0" role="button" aria-label="View larger image: Coffee and coding" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/Coffee Shop Programmer.jpg" alt="Laptop and coffee at a cafe table">
+                    <figcaption>Coffee and coding</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img class="gallery-thumb lazy" tabindex="0" role="button" aria-label="View larger image: Free Wi-Fi" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/Free Wifi.jpg" alt="Free Wi-Fi available at the cafe">
+                    <figcaption>Free Wi-Fi</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img class="gallery-thumb lazy" tabindex="0" role="button" aria-label="View larger image: Stay connected" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/Scheme.jpg" alt="Connected devices and internet services">
+                    <figcaption>Stay connected</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img class="gallery-thumb lazy" tabindex="0" role="button" aria-label="View larger image: Our cafe identity" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/emblem.jpg" alt="Cyber cafe emblem">
+                    <figcaption>Our cafe identity</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img class="gallery-thumb lazy" tabindex="0" role="button" aria-label="View larger image: Our gaming area" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/cafe-main.jpg" alt="Wide view of the cafe gaming stations">
+                    <figcaption>Our gaming area</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img class="gallery-thumb lazy" tabindex="0" role="button" aria-label="View larger image: Interior atmosphere" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/Design.jpg" alt="Interior lighting and gaming desks">
+                    <figcaption>Interior atmosphere</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <div class="image-viewer" id="image-viewer" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Gallery image preview">
+            <button type="button" id="close-image-viewer" class="close-modal" aria-label="Close image preview">&times;</button>
+            <img id="large-gallery-image" src="images/cafe-main.jpg" alt="Selected cafe gallery image">
+            <p id="large-image-caption"></p>
+        </div>
+
+        <section class="card" aria-labelledby="tools-heading">
+            <h2 id="tools-heading">Interactive tools</h2>
+            <div class="interactive-grid">
+                <div class="interactive-tool">
+                    <h3>Display settings</h3>
+                    <button type="button" class="btn" id="change-color">Change background color</button>
+                    <p class="small-note" id="color-name" aria-live="polite">Theme 1 of 5</p>
+                    <button type="button" class="btn" id="theme-toggle" aria-pressed="false">Switch Day / Night</button>
+                </div>
+                <div class="interactive-tool">
+                    <h3>Local time</h3>
+                    <div class="date-box" id="date-time" aria-live="off">Loading date and time…</div>
+                    <button type="button" class="btn" id="show-time">Show current time</button>
+                    <p id="time-feedback" class="small-note" aria-live="polite"></p>
+                </div>
+                <div class="interactive-tool">
+                    <h3>Welcome message</h3>
+                    <label for="language-select">Choose language</label>
+                    <select id="language-select">
+                        <option value="en">English</option>
+                        <option value="ru">Русский</option>
+                        <option value="kk">Қазақша</option>
+                    </select>
+                    <p id="welcome-message" aria-live="polite">Welcome to our Internet Cafe!</p>
+                </div>
+                <div class="interactive-tool">
+                    <h3>Sound and animation</h3>
+                    <button type="button" class="btn" id="play-sound">Play notification sound</button>
+                    <button type="button" class="btn" id="animate-card">Animate this section</button>
+                    <p id="sound-feedback" class="small-note" aria-live="polite"></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card" aria-labelledby="read-more-heading">
+            <h2 id="read-more-heading">More about our cafe</h2>
+            <p>Our internet cafe combines gaming, fast connectivity and a comfortable place to meet friends.</p>
+            <div id="extra-cafe-info" class="read-more-content" hidden>
+                <p>Choose from Standard, VIP and Pro Tournament zones. Our space is designed for casual gaming, team practice, studying and coding.</p>
+                <ul id="cafe-tips" class="cafe-tips"></ul>
+            </div>
+            <button type="button" class="btn" id="read-more-toggle" aria-expanded="false" aria-controls="extra-cafe-info">Read more</button>
+        </section>
+        <section class="card" aria-labelledby="faq-heading">
+            <h2 id="faq-heading">Frequently Asked Questions</h2>
+            <label for="faq-search" class="sr-only">Search the FAQ and highlight matches</label>
+            <input type="search" id="faq-search" class="page-search" placeholder="Search the page… (try “station” or “book”)" autocomplete="off">
+            <p id="faq-search-status" class="small-note" aria-live="polite"></p>
+            <div class="faq-list">
+                <div><button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="faq-answer-1">What are your opening hours?</button><div class="accordion-panel" id="faq-answer-1" aria-hidden="true"><div><p>Our internet cafe is designed for gaming sessions at any time. Please contact us to confirm current availability.</p></div></div></div>
+                <div><button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="faq-answer-2">How much does a gaming station cost?</button><div class="accordion-panel" id="faq-answer-2" aria-hidden="true"><div><p>Standard stations cost $3/hour, VIP gaming stations cost $6/hour, and the Pro Tournament Zone costs $10/hour.</p></div></div></div>
+                <div><button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="faq-answer-3">Can I book a station in advance?</button><div class="accordion-panel" id="faq-answer-3" aria-hidden="true"><div><p>Yes. Open the Contact Us page and submit the booking request form with your preferred zone.</p></div></div></div>
+                <div><button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="faq-answer-4">Do you host tournaments?</button><div class="accordion-panel" id="faq-answer-4" aria-hidden="true"><div><p>Our Pro Tournament Zone is intended for team sessions and tournament-style gaming.</p></div></div></div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal-backdrop" id="subscription-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-content">
+        <button type="button" class="close-modal" id="close-modal" aria-label="Close subscription form">&times;</button>
+        <h2 id="modal-title">Join our cafe updates</h2>
+        <p>Get news about gaming events, tournaments and special offers.</p>
+        <p class="popup-more-info">For more information, click <a href="https://youtu.be/dQw4w9WgXcQ?si=LxP4lefhj2hTHnbE" target="_blank" rel="noopener noreferrer">Here</a>.</p>
+        <form id="subscription-form">
+          <label for="subscription-email">Email address</label>
+          <input id="subscription-email" name="subscription-email" type="email" placeholder="you@example.com" autocomplete="email" required>
+          <button class="btn" type="submit">Subscribe</button>
+          <p id="subscription-feedback" class="form-message" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+        <p>Created by: Eraly</p>
+        <p>Current date and time: <span class="footer-date-time" aria-live="off">Loading…</span></p>
+    </footer>
+
+</body>
+</html>
